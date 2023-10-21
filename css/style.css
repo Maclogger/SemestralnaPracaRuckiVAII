@@ -29,9 +29,18 @@ body {
 
 .navbar-toggler {
     border: 3px solid #FF9138;
+    color: white;
+    font-size: 2rem;
 }
 
+.navbar-toggler-icon {
+    color: white;
+}
 
+.ikonkaMenu {
+    color: white;
+    font-size: 1.2rem;
+}
 
 .navbar-toggler:focus {
     box-shadow: none;
@@ -57,7 +66,36 @@ body {
     #sign-in {
         border-radius: 50px;
     }
+
+    .bocneMenucko {
+        visibility: hidden;
+    }
+
+    .sirkaIkoniekVNave {
+        width: 70vw;
+    }
+
+    .ikonkaMenu {
+        font-size: 1.6rem;
+    }
+
 }
 
 
 
+/* body section */
+.icon-height {
+    height: 28px;
+    width: 28px;
+}
+
+.icon-container {
+    background: #FF9138;
+}
+
+.dark-background {
+    background: #2b3944;
+}
+#socialWrap {
+    border-radius: 0px 24px 24px 0px;
+}
