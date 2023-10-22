@@ -124,7 +124,7 @@ nav {
 }
 
 #uvodna_obrazovka .container-fluid {
-    max-width: 80vw;
+    max-width: 70vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -137,15 +137,20 @@ nav {
     padding-top: 8rem;
 }
 
+.logoVlavoHore {
+    margin-left: 1.3rem;
+}
 
-
+.navbar-toggler {
+    margin-right: 1.3rem;
+}
 
 
 
 
 .custom-container {
     margin: 0 auto;
-    max-width: 80vw;
+    max-width: 70vw;
 }
 
 @media (max-width: 992px) {
@@ -215,6 +220,12 @@ nav {
         font-size: 1.6rem;
     }
 
+    .prihlasenie_button {
+        width:70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 .container-fluid {
@@ -226,5 +237,48 @@ nav {
 
 
 footer {
+    padding-top: 2.5rem;
     background-color: #FF9138;
 }
+
+
+.registraciaDiv {
+    border-radius: 24px;
+    background-color: rgba(43, 57, 68, 0.78);
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+
+.form-control {
+    margin-bottom: 1rem;
+    border: none;
+    background-color: white;
+    color: #3A3E4B;
+    width: 100%;
+}
+
+.form-check-input:after {
+    color: #FF9138;
+}
+
+
+.tlacitkoRegistrovat {
+    margin-top: 1rem;
+    background-color: #FF9138;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.formular_sekcia {
+    margin: 0;
+    height: 85vh; /* môžete experimentovať s hodnotou výšky, ak chcete dosiahnuť požadovaný efekt */
+    background-image: url("/images/viadukt.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom; /* zmení smer priblíženia na spodnú stranu obrázku */
+    position: relative;
+}
+
