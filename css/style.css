@@ -217,7 +217,14 @@ nav {
 
 }
 
+.container-fluid {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
 
 
-
-
+footer {
+    background-color: #FF9138;
+}
