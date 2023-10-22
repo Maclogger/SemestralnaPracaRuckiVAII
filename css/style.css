@@ -13,15 +13,30 @@ body {
     color: #FF9138;
 }
 
-.border-hover {
+.nav-link {
     border-top: 5px solid transparent;
     transform: translateY(-4px);
 }
 
-.border-hover:hover {
+.nav-link:hover {
     border-top: 5px solid #ff9138;
     transform: translateY(-4px);
 }
+
+.nav-link.active {
+    border-top: 5px solid #ff9138;
+    transform: translateY(-4px);
+}
+
+#top {
+    position: absolute;
+    left:0;
+    top:0;
+    height:15vh;
+}
+
+
+
 
 #sign-in {
     background: #FF9138;
