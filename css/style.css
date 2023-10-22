@@ -121,6 +121,7 @@ nav {
     position: relative;
     padding-bottom: 14rem;
     padding-top: 14rem;
+    background-position: center center; /* zmení smer priblíženia na spodnú stranu obrázku */
 }
 
 #uvodna_obrazovka::before {
