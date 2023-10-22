@@ -38,14 +38,26 @@ body {
 
 
 
-#sign-in {
-    background: #FF9138;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-}
 
 nav {
     background-color: #3A3E4B;
+}
+
+
+.prihlasenie_button {
+    background-color: #FF9138;
+    border-radius: 24px 0 0 24px;
+    align-items: center; /* centruje obsah vertikálne */
+    justify-content: center; /* centruje obsah horizontálne */
+    border: none;
+    padding: 0.6rem 2rem 0.6rem 2.5rem;
+    text-decoration: none;
+    color: white;
+}
+.prihlasenie_button:hover,
+.prihlasenie_button:hover .bi{
+    background-color: white;
+    color: #FF9138;
 }
 
 
@@ -77,7 +89,10 @@ nav {
     z-index: 1;
 }
 
-
+.navbar {
+    padding-top:0;
+    padding-bottom: 0;
+}
 
 
 /* body section */
@@ -104,6 +119,8 @@ nav {
     background-repeat: no-repeat;
     color: white;
     position: relative;
+    padding-bottom: 14rem;
+    padding-top: 14rem;
 }
 
 #uvodna_obrazovka::before {
@@ -127,14 +144,6 @@ nav {
     max-width: 70vw;
     margin-left: auto;
     margin-right: auto;
-}
-
-.pb-8 {
-    padding-bottom: 8rem;
-}
-
-.pt-8 {
-    padding-top: 8rem;
 }
 
 .logoVlavoHore {
@@ -224,6 +233,16 @@ nav {
         width:70%;
         margin-left: auto;
         margin-right: auto;
+        border-radius: 24px;
+        margin-bottom: 2rem;
+    }
+
+    .moj_navbar {
+        box-shadow: 0 40px 80px 0 rgb(0, 0, 0);
+    }
+
+    .fixed-top {
+        padding-bottom: 1.5rem;
     }
 
 }
@@ -257,12 +276,15 @@ footer {
     background-color: white;
     color: #3A3E4B;
     width: 100%;
+    border-radius: 16px;
 }
 
 .form-check-input:after {
     border-color: #FF9138;
     color: #FF9138;
 }
+
+
 
 .form-check-input:active {
     color: #FF9138;
@@ -279,11 +301,12 @@ footer {
     font-size: 1.3rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
-    border-radius: 5px;
+    border-radius: 16px;
 }
 
 .tlacitkoRegistrovat:hover {
-    background-color: #2b3944;
+    background-color: white;
+    color: #FF9138;
 }
 
 
