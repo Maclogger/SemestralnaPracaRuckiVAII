@@ -260,7 +260,13 @@ footer {
 }
 
 .form-check-input:after {
+    border-color: #FF9138;
     color: #FF9138;
+}
+
+.form-check-input:active {
+    color: #FF9138;
+    border-color: #FF9138;
 }
 
 
@@ -270,7 +276,16 @@ footer {
     color: white;
     border: none;
     width: 100%;
+    font-size: 1.3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 5px;
 }
+
+.tlacitkoRegistrovat:hover {
+    background-color: #2b3944;
+}
+
 
 .formular_sekcia {
     margin: 0;
@@ -281,4 +296,8 @@ footer {
     background-position: center bottom; /* zmení smer priblíženia na spodnú stranu obrázku */
     position: relative;
 }
+
+
+
+
 
