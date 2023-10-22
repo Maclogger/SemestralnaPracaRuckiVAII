@@ -10,7 +10,7 @@
     <title>TOP Cesty</title>
 </head>
 <body>
-    <nav>
+    <nav class="fixed-top">
         <div class="navbar navbar-expand-lg pt-3">
             <div class="container-fluid">
                 <a href="#" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1">
@@ -25,22 +25,22 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul id="nav-length" class="navbar-nav justify-content-between border-top border-2 text-center">
                         <li class="nav-item">
-                            <a href="#" class="nav-link border-hover py-3 text-white">Home</a>
+                            <a href="#uvodna_obrazovka" class="nav-link border-hover py-3 text-white">Domov</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link border-hover py-3 text-white">Our Services</a>
+                            <a href="#" class="nav-link border-hover py-3 text-white">Populárne Cesty</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link border-hover py-3 text-white">About Us</a>
+                            <a href="#" class="nav-link border-hover py-3 text-white">Diskusia</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link border-hover py-3 text-white">Contact Us</a>
+                            <a href="#" class="nav-link border-hover py-3 text-white">Najnovšie Objavy</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link border-hover py-3 text-white">Blog</a>
+                            <a href="#" class="nav-link border-hover py-3 text-white">Novinky</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link border-hover py-3 text-white">Sign up</a>
+                            <a href="#" class="nav-link border-hover py-3 text-white">Registrácia</a>
                         </li>
                         <li class="nav-item d-lg-none">
                             <div class="row sirkaIkoniekVNave mx-auto pb-3">
@@ -65,7 +65,7 @@
                         <li class="nav-item">
                             <a href="#" id="sign-in" class="nav-link my-2 px-4 text-white">
                                 <i class="bi bi-person-circle"></i>
-                                Sign In
+                                Prihlásenie
                             </a>
                         </li>
                     </ul>
@@ -94,7 +94,30 @@
     </div>
 
 
-    <div>
+    <div id="uvodna_obrazovka">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <!-- Ľavý stĺpec s textom -->
+                <div class="col-md-6 d-flex align-items-center content-text">
+                    <div>
+                        <span class="brand text-decoration-none d-block fw-bold fs-1">
+                            <span style="color: white;">TOP</span> Cesty
+                        </span>
+                        <p>Nájdite pekné miesta, kde si zajazdiť a podeľte sa o svoje zážitky.</p>
+                    </div>
+                </div>
+
+                <!-- Pravý stĺpec s obrázkom mapy Slovenska -->
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="images/mapka_white_orange.png" alt="Mapa Slovenska s peknými cestami" class="img-fluid"> <!-- Odkaz na obrázok mapy Slovenska -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="randomObrazovka">
 
         he standard Lorem Ipsum passage, used since the 1500s
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

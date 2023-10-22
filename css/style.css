@@ -5,6 +5,7 @@
 
 body {
     background: #3A3E4B;
+    padding-top:90px;
 }
 
 .brand {
@@ -26,6 +27,11 @@ body {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
+
+nav {
+    background-color: #3A3E4B;
+}
+
 
 .navbar-toggler {
     border: 3px solid #FF9138;
@@ -49,6 +55,12 @@ body {
 #nav-length {
     width: 90%;
 }
+
+
+.bocneMenucko {
+    z-index: 1;
+}
+
 
 @media screen and (max-width : 992px) {
     #nav-length {
@@ -97,5 +109,40 @@ body {
     background: #2b3944;
 }
 #socialWrap {
-    border-radius: 0px 24px 24px 0px;
+    border-radius: 0 24px 24px 0;
 }
+
+
+#uvodna_obrazovka {
+    background-image: url("/images/uvodna_obrazovka_pozadie.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: white;
+    position: relative;
+}
+
+#uvodna_obrazovka::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;  /* Nižšia hodnota ako text */
+}
+
+/* Aby bol text nad tmavým prekryvom */
+#uvodna_obrazovka > * {
+    z-index: 2;  /* Vyššia hodnota ako prekryv */
+    position: relative;  /* Aby bol z-index aplikovaný správne */
+}
+
+#uvodna_obrazovka .container-fluid {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
