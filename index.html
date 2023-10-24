@@ -6,6 +6,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Predvolené načítanie obsahu
+            loadContentWithName("uvodna_obrazovka_sekcia");
+
+            $('body').on('click', '.clickable-div, a[data-content]', function(e) {
+                e.preventDefault();
+                loadContent(this);
+            });
+
+            window.addEventListener('popstate', function(event) {
+                if (event.state && event.state.contentName) {
+                    loadContentWithName(event.state.contentName);
+                }
+            });
+        });
+
+        function loadContentWithName(contentName) {
+            $("#centralny-div").load("sekcie/" + contentName + ".html", function() {
+                window.scrollTo(0, 0);
+            });
+        }
+
+        function loadContent(element) {
+            var contentName = $(element).data("content");
+            history.pushState({ contentName: contentName }, '', contentName);
+            loadContentWithName(contentName);
+        }
+
+    </script>
+
+
     <link rel="stylesheet" href="css/style.css">
     <title>TOP Cesty</title>
 </head>
@@ -15,7 +49,7 @@
     <nav class="fixed-top">
         <div class="navbar navbar-expand-lg pt-3">
             <div class="container-fluid">
-                <a href="#" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 logoVlavoHore">
+                <a href="#" data-content="uvodna_obrazovka_sekcia" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 logoVlavoHore">
                     <span style="color: white;">TOP</span> Cesty
                 </a>
 
@@ -27,10 +61,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul id="nav-length" class="navbar-nav justify-content-between border-top border-2 text-center">
                         <li class="nav-item">
-                            <a href="#top" class="nav-link border-hover py-3 text-white">Domov</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#popularne_cesty" class="nav-link border-hover py-3 text-white">Populárne Cesty</a>
+                            <a href="#" data-content="uvodna_obrazovka_sekcia" class="nav-link border-hover py-3 text-white">Domov</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link border-hover py-3 text-white">Diskusia</a>
@@ -42,7 +73,7 @@
                             <a href="#" class="nav-link border-hover py-3 text-white">Novinky</a>
                         </li>
                         <li class="nav-item">
-                            <a href="registracia.html" class="nav-link border-hover py-3 text-white">Registrácia</a>
+                            <a href="#" data-content="registracia_sekcia" class="nav-link border-hover py-3 text-white">Registrácia</a>
                         </li>
                         <li class="nav-item d-lg-none">
                             <div class="row sirkaIkoniekVNave mx-auto pb-3">
@@ -93,73 +124,18 @@
         </div>
     </div>
 
-    <div id="uvodna_obrazovka">
-        <div class="container-fluid">
-            <div class="row h-100">
-                <!-- Ľavý stĺpec s textom -->
-                <div class="col-md-6 d-flex align-items-center content-text">
-                    <div>
-                        <span class="brand text-decoration-none d-block fw-bold fs-1">
-                            <span style="color: white;">TOP</span> Cesty
-                        </span>
-                        <p>Nájdite pekné miesta, kde si zajazdiť a podeľte sa o svoje zážitky.</p>
-                    </div>
-                </div>
 
-                <!-- Pravý stĺpec s obrázkom mapy Slovenska -->
-                <div class="col-md-6 d-flex align-items-center justify-content-center">
-                    <img src="images/mapka_white_orange.png" alt="Mapa Slovenska s peknými cestami" class="img-fluid"> <!-- Odkaz na obrázok mapy Slovenska -->
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- TOTO JE ZAČIATOK ČASTI KÓDU, KTORÝ SA MENÍ: -->
 
-    <div id="popularne_cesty" class="container custom-container pt-5">
+    <div id="centralny-div"></div>
 
-        <!-- Nadpis Sekcie -->
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center mb-4">Populárne cesty</h1>
-            </div>
-        </div>
+    <!-- TOTO JE KONIEC ČASTI KÓDU, KTORÝ SA MENÍ -->
 
-        <!-- Riadok 1 -->
-        <div class="row align-items-center custom-row pt-4 pb-4">
-            <div class="col-md-6">
-                <img src="/images/pezinska_baba.jpg" alt="Obrázok 1" class="img-fluid custom-img">
-            </div>
-            <div class="col-md-6 pt-4 pt-md-0">
-                <h2>Pezínska Baba</h2>
-                <p>Preteknite sa so slnkom pozdĺž srdcaubijúcej trasy Pezínska Baba, kde sa zelené panoráma stretáva s modrým obzorom a motorový rev spieva pesničku slobody.</p>
-            </div>
-        </div>
 
-        <!-- Riadok 2 -->
-        <div class="row align-items-center custom-row pt-4 pb-4">
-            <div class="col-md-6">
-                <img src="/images/sturec.jpg" alt="Obrázok 2" class="img-fluid custom-img">
-            </div>
-            <div class="col-md-6 pt-4 pt-md-0">
-                <h2>Šturec</h2>
-                <p>Na motorke cez Šturec sa cítite ako súčasť nádherného prírodného plátna, s vetrom, ktorý vám šepká príbehy hôr a s cestami, ktoré vás vedú k nekonečným objavom.</p>
-            </div>
-        </div>
 
-        <!-- Riadok 3 -->
-        <div class="row align-items-center custom-row pt-4 pb-4">
-            <div class="col-md-6">
-                <img src="/images/viadukt.jpeg" alt="Obrázok 3" class="img-fluid custom-img">
-            </div>
-            <div class="col-md-6 pt-4 pt-md-0">
-                <h2>Viadukt Telgrát</h2>
-                <p>Neodolateľná krása cesty vedúcej pozdĺž Viaduktu - Telgrát vás pozýva zastaviť sa a zachytiť okamih, kde sa technické dielo stretáva s prirodzenou eleganciou krajiny, vytvárajúc tak perfektnú kompozíciu pre každého fotografa.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="text-center text-white py-3">
+    <footer class="text-center text-white py-3 footer">
         <!-- Copyright -->
-        <p class="mb-0">&copy; 2023 TOPCesty.sk | Všetky práva vyhradené.</p>
+        <p class="mb-0 textOpacnyHighlight">&copy; 2023 TOPCesty.sk | Všetky práva vyhradené.</p>
     </footer>
 
 </body>

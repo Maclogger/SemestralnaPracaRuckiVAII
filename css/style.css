@@ -198,6 +198,13 @@ nav {
     border-radius: 24px;
 }
 
+.testDiv {
+
+    background-color: #fc3c3c;
+    height: 10vh;
+
+}
+
 
 
 
@@ -518,18 +525,22 @@ a {
 }
 
 .link-muted:hover {
-    color:#FF9138;
-    .ikonkaReply {
-        color: #FF9138;
-    }
+    color: #FF9138;
 }
 
-.link-muted:hover {
-    color:#FF9138;
-    .ikonkaSrdiecko {
-        color: #FF9138;
-    }
+.link-muted:hover .ikonkaReply {
+    color: #FF9138;
 }
+
+
+.link-muted:hover {
+    color: #FF9138;
+}
+
+.link-muted:hover .ikonkaSrdiecko {
+    color: #FF9138;
+}
+
 
 
 
