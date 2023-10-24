@@ -4,6 +4,22 @@
     color: white;
 }
 
+
+
+
+
+
+*::selection {
+    background-color: #FF9138; /* farba pozadia pre zvýraznený text */
+    color: white; /* farba textu pre zvýraznený text */
+}
+
+.textOpacnyHighlight::selection {
+    color: white;
+    background-color: #3A3E4B;
+}
+
+
 body {
     background: #3A3E4B;
     padding-top:90px;
@@ -36,9 +52,6 @@ body {
 }
 
 
-
-
-
 nav {
     background-color: #3A3E4B;
 }
@@ -54,6 +67,7 @@ nav {
     text-decoration: none;
     color: white;
 }
+
 .prihlasenie_button:hover,
 .prihlasenie_button:hover .bi{
     background-color: white;
@@ -133,6 +147,7 @@ nav {
     left: 0;
     background: rgba(0, 0, 0, 0.6);
     z-index: 0;  /* Nižšia hodnota ako text */
+
 }
 
 /* Aby bol text nad tmavým prekryvom */
@@ -259,6 +274,7 @@ nav {
 footer {
     padding-top: 2.5rem;
     background-color: #FF9138;
+
 }
 
 
@@ -320,6 +336,202 @@ footer {
     background-position: center bottom; /* zmení smer priblíženia na spodnú stranu obrázku */
     position: relative;
 }
+
+
+
+
+/*
+    STYLY PRE CESTA.html
+*/
+
+
+
+.obrazokCesty {
+    border-radius: 24px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.indicator-yes {
+    color: #14e314;
+}
+
+.indicator-no {
+    color: #fc3c3c;
+}
+
+.pravaStranaAtributy {
+    display: grid;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 992px) {
+    .lavaStranaAtributy {
+        padding-right: 2rem;
+    }
+    .pravaStranaAtributy {
+        padding-left: 2rem;
+        margin-top: 0;
+    }
+}
+
+.zaboleneRohy {
+    background-color: #2b3944;
+    border-radius: 24px;
+}
+
+.lavaStranaAtributy {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.riadokAtribut p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 1.7rem;
+    margin-right: 1.7rem;
+}
+
+.ukazatel {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 5px; /* Výška posuvníka */
+    background-color: #ddd; /* Farba pravej časti posuvníka */
+    border-radius: 5px; /* Zaoblenie rohov */
+}
+
+.slider-value {
+    position: absolute;
+    top: 5px; /* Posun nad posuvník */
+    left: 30%; /* Zmena na aktuálnu hodnotu trasy v percentách */
+    color: #FF9138;
+    font-weight: bold;
+}
+
+.slider-fill {
+    height: 100%;
+    width: 50%; /* Zmena na aktuálnu hodnotu trasy v percentách */
+    background-color: #FF9138; /* Farba ľavej časti posuvníka */
+    border-radius: 5px; /* Zaoblenie rohov */
+}
+
+
+
+.dlzkaTrasy {
+    width: 35%;
+}
+
+.stavCesty {
+    width: 70%;
+}
+
+.atributVytazenosti {
+    border-radius: 24px;
+    background-color: #FF9138;
+    width: fit-content;
+    margin-left: 1rem;
+    padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+}
+
+
+
+
+.cesta_sekcia {
+    padding: 0 10% 5% 10%;
+    margin: 0 0 0 1.5rem;
+}
+
+
+@media (max-width: 992px) {
+    .cesta_sekcia {
+        padding: 0 0 5% 0;
+        width: 100vw;
+    }
+}
+
+/* Vlastné CSS pre dodatočné štylizovanie */
+.comment-section {
+    background-color: #f8f9fa; /* Svetlý odtieň pre pozadie komentárov */
+    border-radius: 5px; /* Zaoblené rohy pre sekciu komentárov */
+    padding: 20px; /* Odstup obsahu komentárov od okrajov sekcie */
+}
+
+.comment {
+    border-bottom: 1px solid #dee2e6; /* Oddelovač medzi komentármi */
+    padding-bottom: 15px; /* Odstup medzi komentárom a oddelovačom */
+    margin-bottom: 15px; /* Odstup medzi oddelovačom a nasledujúcim komentárom */
+}
+
+.comment:last-child {
+    border-bottom: none; /* Odstránenie oddelovača od posledného komentára */
+}
+
+link-muted {
+    color: #aaa;
+}
+
+.link-muted:hover {
+    color: #1266f1;
+}
+
+.komentare {
+    margin: 0;
+    background-color: white;
+
+}
+
+.komentare * {
+    color: #3A3E4B;
+}
+
+.mapaStlpec {
+    background-color: red;
+
+}
+
+iframe {
+    z-index: 100;
+}
+
+
+
+.ikonkaSrdiecko {
+    color: #3A3E4B;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.link-muted:hover {
+    color:#FF9138;
+    .ikonkaReply {
+        color: #FF9138;
+    }
+}
+
+.link-muted:hover {
+    color:#FF9138;
+    .ikonkaSrdiecko {
+        color: #FF9138;
+    }
+}
+
+
 
 
 
